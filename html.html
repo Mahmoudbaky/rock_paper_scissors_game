@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rock paper scissors game </title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+
+<body>
+    
+    <h1> Rock paper scissors game </h1>
+
+    <div id="pics">
+
+            <img id="mahmoud" src="wallpaperflare.com_wallpaper(4).jpg" height= "200"  alt = "mahmoud" title = "mahmoud">
+            
+
+            <img id="nsoo7y" src="249209445_114086167727104_5661993500617518042_n.jpg" height= "200" alt = "nsoo7y" title = "nsoo7y">
+       
+    </div>
+
+    <div id="play_pics">
+        <img id="user" src="user/user_paper.png" height= "50" alt = "rock" title = "rock">
+        <img id="opponent" src="opponent/op_paper.png" height= "50" alt = "rock" title = "rock">
+    </div>
+
+    <div id ="btns">
+        <button id="rock_btn"     onclick="rock_function()"     class="buttons"> Rock     </button>
+        <button id="paper_btn"    onclick="paper_function()"    class="buttons"> Paper    </button>
+        <button id="scissors_btn" onclick="scissors_function()" class="buttons"> Scissors </button>
+    </div>
+
+    <p id="score"> <span id="user_score">0</span>-<span id="opponent_score">0</span>  </p>
+
+    <p id="result"> <span id="win_text"> </span> <br> <span id="reset_txt"> </span> </p>
+
+    
+    
+
+    
+
+    
+    <script src="app.js"></script>
+</body>
+
+</html>
