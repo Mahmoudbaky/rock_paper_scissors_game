@@ -26,7 +26,6 @@ let scissors_btn = document.getElementById('scissors_btn');
 /*************************** rock ***********/
 
 function rock_function() {
-    const rock_value = 1;
 
     // opponent side
     opponent_value =  Math.floor((Math.random() * 3)+1);
@@ -44,7 +43,7 @@ function rock_function() {
     }
 
     // user side
-    user_value = rock_value;
+    user_value = rock;
     user_play = document.getElementById('user');
     user_play.src = "user/user_rock.png";
 
@@ -94,25 +93,25 @@ function rock_function() {
 
 /*************************** paper ***********/
 function paper_function() {
-    const paper_value = 2;
+    
 
     // opponent side
     let opponent_value =  Math.floor((Math.random() * 3)+1);
     opponent_play  = document.getElementById('opponent');
     switch(opponent_value){
-        case 1:
+        case rock:
             opponent_play.src = "opponent/op_rock.png";
             break;
-        case 2:
+        case paper:
             opponent_play.src = "opponent/op_paper.png";
             break;
-        case 3:
+        case scissors:
             opponent_play.src = "opponent/op_scissors.png";
             break;
     }
 
     // user side
-    user_value = paper_value;
+    user_value = paper;
     user_play = document.getElementById('user');
     user_play.src = "user/user_paper.png";
 
@@ -120,10 +119,10 @@ function paper_function() {
     if (user_value == opponent_value){
         
     }
-    else if (user_value == 2 && opponent_value == 1){
+    else if (user_value ==  paper&& opponent_value == rock){
         user_win_count++;
     }
-    else if (user_value == 2 && opponent_value == 3){
+    else if (user_value == paper && opponent_value == scissors){
         opponent_win_count++;
     }
 
@@ -162,26 +161,25 @@ function paper_function() {
 
 /*************************** scissors ***********/
 function scissors_function() {
-    const scissors_value = 3;
-
+    
     // opponent side
     let opponent_value =  Math.floor((Math.random() * 3)+1);
     opponent_play  = document.getElementById('opponent');
     switch(opponent_value){
-        case 1:
+        case rock:
             opponent_play.src = "opponent/op_rock.png";
             break;
-        case 2:
+        case paper:
             opponent_play.src = "opponent/op_paper.png";
             break;
-        case 3:
+        case scissors:
             opponent_play.src = "opponent/op_scissors.png";
             break;
     }
 
 
     // user side
-    user_value = scissors_value;
+    user_value = scissors;
     user_play = document.getElementById('user');
     user_play.src = "user/user_scissors.png";
 
@@ -189,10 +187,10 @@ function scissors_function() {
     if (user_value == opponent_value){
         
     }
-    else if (user_value == 3 && opponent_value == 1){
+    else if (user_value == scissors && opponent_value == rock){
         opponent_win_count++;
     }
-    else if (user_value == 3 && opponent_value == 2){
+    else if (user_value == scissors && opponent_value == paper){
         user_win_count++;
     }
     
