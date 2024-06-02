@@ -8,6 +8,8 @@
     1- how to use event listener / remove event listener
 */
 
+
+
 const rock = 1;
 const paper = 2;
 const scissors = 3;
